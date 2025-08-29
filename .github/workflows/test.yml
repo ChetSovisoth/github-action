@@ -8,6 +8,8 @@ on:
       - main
       - dev-* #dev-new, dev-this-is-new
       - 'feat/**' #feat/new, feat/sth/sth
+    paths-ignore:
+      - '.github/workflows/*' # will be triggered when files in this path is changed and within the included branches
 jobs:
     test:
       runs-on: ubuntu-latest
